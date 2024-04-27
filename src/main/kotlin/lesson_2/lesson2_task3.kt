@@ -1,9 +1,11 @@
 package org.example.lesson_2
 
+const val trainExitHour: Int = 9
+const val trainExitMinut: Int = 39
+const val travelTime: Int = 457
+
 fun main() {
-    val trainExitHour = 9
-    val trainExitMinut = 39
-    val travelTime = 457
+
     val totalMinutesFromMidnight = trainExitHour * 60 + trainExitMinut + travelTime
     val arrivalHour = (totalMinutesFromMidnight / 60) % 24
     val arrivalMinute = totalMinutesFromMidnight % 60
