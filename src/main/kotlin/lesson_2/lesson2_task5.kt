@@ -1,4 +1,4 @@
-package org.example.lesson2
+package org.example.lesson_2
 
 fun main() {
     val clientSum = 70000
