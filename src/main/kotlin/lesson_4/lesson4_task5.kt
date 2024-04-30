@@ -1,8 +1,12 @@
 package org.example.lesson_4
 
+const val maxCountCrew = 70
+const val minCountCrew = 55
+const val minCountBox = 50
+
 fun main() {
     print("Корабль имеет повреждения?")
-    val damageShip = readLine().toBoolean()
+    val hasDamageShip = readLine().toBoolean()
 
     print("Каков состав экипажа?")
     val countCrew = readln().toInt()
@@ -11,10 +15,10 @@ fun main() {
     val countBox = readln().toInt()
 
     print("Условия благоприятные?")
-    val conditions = readLine().toBoolean()
+    val hasConditions = readLine().toBoolean()
 
-    val flyVer1 = (!damageShip && countCrew in 55..70 && countBox > 50) ||
-            (damageShip && countCrew == 70 && countBox >= 50 && conditions)
+    val flyVer1 = (!hasDamageShip && countCrew in minCountCrew..maxCountCrew && countBox > minCountBox) ||
+            (hasDamageShip && countCrew == maxCountCrew && countBox >= minCountBox && hasConditions)
 
     println("Может ли корабль отправиться в плавание? $flyVer1")
 }
