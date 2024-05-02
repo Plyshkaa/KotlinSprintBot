@@ -1,15 +1,18 @@
 package org.example.lesson_4
 
-const val airHumidity = 20
-const val currentYear = "Зима"
+const val IDEAL_AIR_HUMIDITY = 20
+const val GROWING_SEASON = "Зима"
+const val IS_SUNNY_WEATHER = true
+const val IS_AWNING_OPEN = true
+
 fun main() {
-    val weather = true
-    val awning = true
+    val isSunny = true
+    val isAwningOpen = true
     val currentSeason = "Зима"
+    val airHumidity = 20
 
-    val isGrowingSeason = currentSeason != currentYear
-    val isIdealHumidity = airHumidity == airHumidity
-    val harvest = weather && awning && isIdealHumidity && isGrowingSeason
+    val areConditionsFavorable: Boolean = isSunny == IS_SUNNY_WEATHER && isAwningOpen == IS_AWNING_OPEN &&
+            airHumidity == IDEAL_AIR_HUMIDITY && currentSeason != GROWING_SEASON
 
-    println("Благоприятные ли условия сейчас для роста бобовых? $harvest”")
+    println("Благоприятные ли условия сейчас для роста бобовых? $areConditionsFavorable”")
 }
